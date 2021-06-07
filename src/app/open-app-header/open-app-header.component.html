@@ -1,0 +1,142 @@
+<div class="banner-body-container">
+  <div class="banner-column-1">
+    <img class="banner-dots-1" src="../assets/images/accounting_dots.svg" />
+    <div class="banner-container">
+      <img
+        class="banner-text-weMake"
+        src="../assets/images/We make it Super Sim.svg"
+      />
+      <img class="banner-text-line" src="../assets/images/Line 3.svg" alt="" />
+      <img class="banner-image" src="../assets/images/collect_img-video.png" />
+    </div>
+  </div>
+  <div class="banner-column-2">
+    <img class="banner-dots-2" src="../assets/images/accounting_dots.svg" />
+    <div class="calculator-container">
+      <div class="form-container">
+        <form class="eligiblity-form">
+          <h3 class="eligiblity-title">Eligiblity Calculator</h3>
+          <div class="row pt-35">
+            <div class="form-group">
+              <label for="montlyIncome">Monthly Income</label>
+              <div class="font-bold">
+                {{ incomeVal | currency: "INR":true:"1.0-2" }}
+              </div>
+              <div class="range-wrap">
+                <input
+                  type="range"
+                  class="range form-control"
+                  min="100000"
+                  id="monthlyIncome"
+                  max="300000"
+                  [(ngModel)]="incomeVal"
+                  [ngModelOptions]="{ standalone: true }"
+                  step="5000"
+                />
+                <div class="currency-limits">
+                  <span>&#8377; 1,00,000</span>
+                  <span>&#8377;3,00,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="montlyExpense">Monthly Expense</label>
+              <div class="font-bold">
+                {{ expenseVal | currency: "INR":true:"1.0-2" }}
+              </div>
+              <div class="range-wrap">
+                <input
+                  type="range"
+                  class="range form-control"
+                  min="5000"
+                  id="monthlyExpense"
+                  max="50000"
+                  [(ngModel)]="expenseVal"
+                  [ngModelOptions]="{ standalone: true }"
+                  step="500"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label>Repayment Tenure</label>
+              <select
+                class="form-control dropdown-container"
+                name="repaymentTenure"
+              >
+                <option value="">Please select tenure months</option>
+                <option *ngFor="let tenure of tenureList" [value]="tenure">
+                  {{ tenure }}
+                </option>
+              </select>
+            </div>
+            <hr />
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label>Do you have any existing loans?</label>
+              <label class="switch form-control">
+                <input type="checkbox" checked />
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label>EMI of existing loan (optional)</label>
+              <input
+                type="number"
+                name="existingEMI"
+                class="form-control hide-default__border font-bold"
+                autocomplete="off"
+              />
+            </div>
+            <hr />
+          </div>
+        </form>
+      </div>
+      <div class="getMoney-container">
+        <div class="get-money">
+          <div class="txt-loan-amount">
+            <span class="open-font ft-300">Loan Amount</span>
+            <div>
+              <div id="count1" class="font-lg"></div>
+            </div>
+          </div>
+          <div class="text-emi-amount">
+            <span class="open-font ft-300">Your EMI will be</span>
+            <div id="count2" class="font-lg"></div>
+          </div>
+          <a
+            href="javascript:void(0)"
+            id="myBtn"
+            class="btn btn-light btn-white justify-center pt-7"
+            >Get Money</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- navigation bar with logo and navigations -->
+<nav id="navbar" class="open-navbar top-format">
+  <div id="navbar-container" class="navbar-container">
+    <img
+      class="navbar-logo"
+      src="../assets/images/logo.png"
+      alt="Open App Logo"
+    />
+    <ul class="navbar-categories">
+      <li><a href="javascript:void(0)">Products</a></li>
+      <li><a href="javascript:void(0)">Solutions</a></li>
+      <li><a href="javascript:void(0)">Pricing</a></li>
+    </ul>
+    <ul class="navbar-buttons">
+      <li><a class="btn btn-light">Login</a></li>
+      <li><a class="btn btn-dark">Get Started</a></li>
+    </ul>
+  </div>
+</nav>
