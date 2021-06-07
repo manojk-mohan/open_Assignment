@@ -1,3 +1,20 @@
+<!-- Success Modal -->
+<div id="id01" class="w3-modal show-front">
+  <div class="w3-modal-content modal-height">
+    <header class="w3-container modal-bg">
+      <span
+        onclick="document.getElementById('id01').style.display='none'"
+        class="w3-button w3-display-topright"
+        >&times;</span
+      >
+      <h2 class="align-center">Congratulations!!!!!!</h2>
+    </header>
+    <div class="w3-container">
+      <p class="align-center">Your loan will be processed in 3 working days.</p>
+    </div>
+  </div>
+</div>
+<!-- main header body -->
 <div class="banner-body-container">
   <div class="banner-column-1">
     <img class="banner-dots-1" src="assets/images/accounting_dots.svg" />
@@ -110,12 +127,20 @@
             <span class="open-font ft-300">Your EMI will be</span>
             <div id="count2" class="font-lg"></div>
           </div>
-          <a
+          <!-- <a
             href="javascript:void(0)"
             id="myBtn"
-            class="btn btn-light btn-white justify-center pt-7"
+            class="btn-open btn-light btn-white justify-center pt-7"
             >Get Money</a
-          >
+          > -->
+          <div class="w3-container">
+            <button
+              onclick="document.getElementById('id01').style.display='block'"
+              class="btn-open btn-light btn-white justify-center pt-7"
+            >
+              Get Money
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -131,8 +156,8 @@
       <li><a href="javascript:void(0)">Pricing</a></li>
     </ul>
     <ul class="navbar-buttons">
-      <li><a class="btn btn-light">Login</a></li>
-      <li><a class="btn btn-dark">Get Started</a></li>
+      <li><a class="btn-open btn-light">Login</a></li>
+      <li><a class="btn-open btn-dark">Get Started</a></li>
     </ul>
   </div>
 </nav>

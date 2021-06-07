@@ -39,7 +39,7 @@
 }
 
 #navbar ul li {
-  font: normal normal normal 25px/34px Open Sans;
+  font: normal normal normal 20px/34px Open Sans;
   color: var(--light-black);
 }
 .navbar-categories a:hover {
@@ -335,4 +335,23 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+/* modal css */
+.show-front {
+  z-index: 15;
+  font-family: "Montserrat", sans-serif;
+}
+.align-center {
+  text-align: center;
+}
+.modal-height {
+  height: 200px;
+}
+.modal-bg {
+  color: var(--light-white);
+  background: var(--open-violet);
+}
+.w3-container {
+  margin-top: 20px;
 }

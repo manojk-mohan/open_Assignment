@@ -49,7 +49,7 @@ p {
 /*******************/
 
 /* Utility buttons */
-.btn {
+.btn-open {
   display: inline-block;
   border: none;
   padding: 0.25rem 1rem;
