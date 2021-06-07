@@ -4,5 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 **#Functionality**(Not fully implemented)
 >Eligiblity calculator for loan is used to select the values required for loan criteria
+
 >Get Money button displays pop up modal for loan applied confirmation
-T>he Loan amount and EMI aomunt are animated on load 
+
+>The Loan amount and EMI aomunt are animated on load 
